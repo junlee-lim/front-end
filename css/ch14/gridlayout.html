@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{margin: 0;}
+        main{width: 100vw;
+            display: grid;
+            grid-template-columns: 200px 1fr 300px;
+            grid-template-rows: 80px 200px auto 200px;
+            gap: 12px;}
+        main>*{
+            padding: 0.8em;
+            color: slateblue;
+            background-color: lavender;
+        }
+        .sec-2 div{
+            /* display: none; */
+            margin: 1em;
+            padding: 1.6em;
+            line-height: 2.4em;
+            font-family: serif;
+            color: #555;
+            background-color: white;
+        }
+        nav{
+            grid-column: 1/-1;
+        }
+        footer{
+            grid-column: 1/-1;
+        }
+        aside{
+            grid-row: 2/4;
+        }
+        .sec-1{
+            grid-column: 2/-1;
+        }
+    </style>
+</head>
+<body>
+    <main>
+    <nav>nav</nav>
+    <aside>aside</aside>
+    <section class="sec-1">.sec-1</section>
+    <section class="sec-2">.sec-2
+        <div>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Possimus provident, commodi saepe aliquam, numquam officia officiis, vitae beatae aspernatur culpa id reprehenderit minus corporis ratione cum laudantium labore iste doloribus!<br>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Possimus provident, commodi saepe aliquam, numquam officia officiis, vitae beatae aspernatur culpa id reprehenderit minus corporis ratione cum laudantium labore iste doloribus!<br>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Possimus provident, commodi saepe aliquam, numquam officia officiis, vitae beatae aspernatur culpa id reprehenderit minus corporis ratione cum laudantium labore iste doloribus!<br>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Possimus provident, commodi saepe aliquam, numquam officia officiis, vitae beatae aspernatur culpa id reprehenderit minus corporis ratione cum laudantium labore iste doloribus!
+        </div>
+    </section>
+    <section class="sec-3">.sec-3</section>
+    <footer>footer</footer>
+</main>
+</body>
+</html>

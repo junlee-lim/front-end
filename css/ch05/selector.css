@@ -1,0 +1,8 @@
+*{font-weight: bold; color: darkorange;}
+p{color: olivedrab;}
+.blue.dark{color: mediumblue;}
+.blue{color: lightblue;}
+p.blue{color: slateblue;}
+*{color: plum;}
+#red{color: tomato;}
+span, .dark, #red {text-decoration: underline; text-decoration-color: aqua;}
