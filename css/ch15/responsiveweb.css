@@ -3,7 +3,7 @@ body{margin: 0;}
 #wrapper > * {background-color: lightblue; padding: 1em;
 font-size: 1.2em; color: royalblue; font-weight: bold;}
 header{position: relative; min-width: 80px;}
-nav ul{padding-left: 0.5em;}
+nav ul{padding-left: 0.5em; background-color: aqua;}
 nav li {display: inline-block; margin-right: 1em; color: #333;}
 #menu {color: #333; height: 64px; background-color: aqua;
         position: absolute; top: 0; right:0; cursor: pointer;
