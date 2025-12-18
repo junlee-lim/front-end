@@ -42,9 +42,9 @@ n6++; //쓰기
 console.log('n6: ', n6); //읽기
 
 let n7 = 10;
-console.log('n7++: ', n7++); //쓰기(++이 뒤에 있을 땐 읽기 작업 먼저)
+console.log('n7++: ', n7++); //읽기 -> 쓰기
 console.log('n7: ', n7); //읽기
 
 let n8 = 10;
-console.log('++n8: ', ++n8); //쓰기(++이 앞에 있을 땐 쓰기 작업 먼저)
+console.log('++n8: ', ++n8); //쓰기 -> 읽기
 console.log('n8: ', n8); //읽기
