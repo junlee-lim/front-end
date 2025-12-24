@@ -1,6 +1,9 @@
 #curriculum{
     background-color: var(--color-dark);
 }
+#curriculum .section__tag{
+    color: white;
+}
 #curriculum .section__title{
     color: white;
 }
@@ -62,13 +65,16 @@
 @media (min-width: 769px) {
     #curriculum{
         grid-column: 1/-1;
-        padding-bottom: 88px;
+        padding:64px 50px 88px 50px
     }
     .curriculum{
-        width: 100%;
+        width: 90vw;
     }
     .curriculum__list{
-        margin: 56px 0 56px 40px;
+        margin-top: 56px;
+        justify-content: center;
+        align-items: center;
+        width: 90vw;
     }
     .curriculum__list li{
         position: relative;
@@ -89,9 +95,11 @@
         opacity: 1;
     }
     .curriculum__progress{
+        justify-content: center;
+        align-items: center;
         top: 70px;
         left: 56px;
-        width: 1000px;
+        width: 500px;
         height: 8px;
         background-color: rgba(255, 255, 255, 0.103);
     }
@@ -99,13 +107,13 @@
         content: '';
         position: absolute;
         top: 0; left: 0;
-        background-color: var(--color-sub);
+        background-color: whitesmoke;
         width: 0;
         height: 8px;
         transition: all 1s;
     }
     .curriculum__list li:hover::before{
-        background-color: var(--color-sub);
+        background-color: white;
     }
     .curriculum__list li:nth-child(2):hover
     ~ .curriculum__progress::after{

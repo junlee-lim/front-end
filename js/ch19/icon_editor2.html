@@ -44,11 +44,17 @@
                     $td.style.width = $td.style.height = '15px';
                     $td.style.border = '1px solid gray';
 
-                    $td.addEventListener('click', () => {
-                        $td.style.backgroundColor = $inputColor.value;
+                    $td.addEventListener('click', e => {
+                        e.target.style.backgroundColor = e.target.style.backgroundColor ? '' : $inputColor.value; //조건에 값이 있으면 true, 없으면 false
                     })
                 }
             }
+            $inputColorClear.addEventListener('click', () => {
+                const section = document.querySelectorAll('td');
+                for(const item of section){
+                    item.style.backgroundColor = '' //item = 위에 사용한 e.target이랑 같은 것. section안에 td의 배열이 담겨 있고 'const item of section'로 item에는 td의 요소들이 순차적으로(for구문 썼으니까) 담김.
+                }
+            })
         }
 
         const $editor = document.querySelector('#editor');
