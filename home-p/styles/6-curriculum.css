@@ -95,8 +95,6 @@
         opacity: 1;
     }
     .curriculum__progress{
-        justify-content: center;
-        align-items: center;
         top: 70px;
         left: 56px;
         width: 500px;
