@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>
+        ICON EDITOR
+    </h1>
+    <div id="editor"></div>
+
+    <script>
+        function makeElement(name, attributes){ 
+            const node = document.createElement(name);
+            if(attributes){
+                for(const item in attributes){
+                    node.setAttribute(item, attributes[item]);
+                }
+            }
+            return node;
+        }
+
+        function createIconEditor(target, nx, ny){
+        const $inputColor = makeElement('input', {type: 'color'})
+        target.append($inputColor)
+        
+        const $inputColorClear = makeElement('input', {type: 'button', value: 'clear'})
+        target.append($inputColorClear)
+        $inputColorClear.addEventListener('click', () => {                
+                const tdList = document.querySelectorAll('td');
+                for(const item of tdList) {
+                    //item은 td의 엘리먼트 주소값 담긴다.
+                    item.style.backgroundColor = '';
+                }
+            });
+
+            const $table = createElement('table')
+            target.append($table)
+            $table.style.borderCollapse = 'collapse';
+            $table.style.marginTop = '5px';
+
+            for(let n=0; n<ny; n++){
+                const $tr = makeElement('tr')
+                 $table.append($tr);
+                for(let n=0; n<nx; n++){
+                    const $td = makeElement('td')
+                    $tr.append($td);
+                    $td.style.width = $td.style.height = '15px';
+                    $td.style.border = '1px solid gray';
+
+                    $td.addEventListener('click', e => {
+                        e.target.style.backgroundColor = e.target.style.backgroundColor ? '' : $inputColor.value;
+                    })
+                    
+                }
+            }
+            //$inputColorClear 클릭하면 td 배열 내의 모든 요소가 비워지도록 하기
+            $inputColorClear.addEventListener('click', () => {
+                $td.value = ''
+            })
+        }
+
+        const $editor = document.querySelector('#editor');
+        createIconEditor($editor, 20, 20);
+        
+    </script>
+
+</body>
+</html>

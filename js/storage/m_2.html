@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+       const arr = [10, 20, 30];
+        /*
+        로컬스토리지에 배열 저장하고 싶음.
+        주소값은 로컬스토리지에 저장 불가.
+        primitive 타입만 저장 가능(숫자, 문자열, 불린)
+        배열을 문자열(나중에 배열로 만들 수 있는 >> JSON)로 변환(직렬화)
+        */
+       console.log('arr: ', arr);
+       console.log(typeof arr);
+
+       localStorage.setItem('arr', arr);
+
+       const result = localStorage.getItem('arr');
+       console.log(result);
+       console.log(typeof result);
+    
+       //stringify메소드는 직렬화 때 사용. 객체를 JSON 형태의 문자열로 변환
+       const json = JSON.stringify(arr);
+       console.log('ddd', json);
+       console.log(typeof json);
+       localStorage.setItem('arr2', json);
+
+       const result2 = localStorage.getItem('arr2');
+       //parse 메소드는 역직렬화 때 사용. JSON 형태의 문자열을 객체로 변환
+       const arr2 = JSON.parse(result2);
+       console.log('aaa', arr2);
+       console.log(typeof arr2);
+    </script>
+</body>
+</html>
