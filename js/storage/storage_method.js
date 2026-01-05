@@ -10,10 +10,10 @@ for(let i = 1; i<=100; i++){
 }
 console.log(arr);
 
-let result = null;
+// let result = null;
 
-for(let i=0; i<arr.length; i++){
-    if(arr[i].id === 20){result = arr[i]}
-}
+// for(let i=0; i<arr.length; i++){
+//     if(arr[i].id === 20){result = arr[i]}
+// }
 
-console.log(result)
+// console.log(result)
